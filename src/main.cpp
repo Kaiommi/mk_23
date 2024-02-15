@@ -24,8 +24,8 @@ void loop () {
     usart_send_blocking(USART1,'L')
     usart_send_blocking(USART1,'O')
     usart_send_blocking(USART1,'!')
-    usart_send_blocking(USART1,'/r')
-    usart_send_blocking(USART1,'/n')
+    usart_send_blocking(USART1,'\r')
+    usart_send_blocking(USART1,'\n')
     for (volatile unit32_t i = 0; i < 1000; ++i);1
 }
 //-----------------------------------------------------------------------------------
