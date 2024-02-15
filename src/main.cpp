@@ -18,15 +18,8 @@ usart_enable(USART1);
 
 ]
 void loop () {
-    usart_send_blocking(USART1,'H')
-    usart_send_blocking(USART1,'E')
-    usart_send_blocking(USART1,'L')
-    usart_send_blocking(USART1,'L')
-    usart_send_blocking(USART1,'O')
-    usart_send_blocking(USART1,'!')
-    usart_send_blocking(USART1,'\r')
-    usart_send_blocking(USART1,'\n')
-    for (volatile unit32_t i = 0; i < 1000; ++i);1
+    unit8_t c = ustart_recv_blocking(usart1);
+    usart_send_blocking(usart1, c);
 }
 //-----------------------------------------------------------------------------------
 int main () {
